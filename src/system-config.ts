@@ -33,6 +33,14 @@ const barrels: string[] = [
   'app/navbar',
   'app/+ministries',
   'app/ngfooter',
+  'app/+contact',
+  'app/+calendar',
+  'app/+blog',
+  'app/+sermon',
+  'app/+gallery',
+  'app/+radio-devotions',
+  'app/+welcome',
+  'app/+home',
   /** @cli-barrel */
 ];
 

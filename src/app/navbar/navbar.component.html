@@ -1,6 +1,6 @@
  <header>
         <div class="infoBar">
-        <h1><a href="#">Bible Baptist Church <span>Mattoon, IL</span></a></h1>
+        <h1><a [routerLink]="['/']">Bible Baptist Church <span>Mattoon, IL</span></a></h1>
         <div class="service-times">
                 <ul class="menu vertical">
                     <li>Sunday School<span> 9:30AM</span></li>
@@ -20,7 +20,7 @@
         </div><!--/infoBar-->
     <div class="MainNavigation">
             <ul class="dropdown menu" data-dropdown-menu>
-                <li><a href="#">WELCOME</a></li>
+                <li><a [routerLink]="['welcome']">WELCOME</a></li>
                 <li><a [routerLink]="['About']">ABOUT US</a>
                     <ul class="menu">
                         <li><a href="#">Dropdown Link 1</a></li>
@@ -35,18 +35,48 @@
                         <li><a href="#">Dropdown Link 3</a></li>
                     </ul>
                 </li><!--/ministries-->
-                <li><a href="#">CALENDAR</a></li>
+                <li><a [routerLink]="['calendar']">CALENDAR</a></li>
                 <li><a href="#">MEDIA</a>
                     <ul class="menu">
-                        <li><a href="#">Sermons</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Gallery</a></li>
+                        <li><a [routerLink]="['sermon']">Sermons</a></li>
+                        <li><a [routerLink]="['blog']">Blog</a></li>
+                        <li><a [routerLink]="['radio-devotions']">Radio Devotions</a></li>
+                        <li><a [routerLink]="['gallery']">Gallery</a></li>
                     </ul>
                 </li><!--/media-->
-                <li><a href="#">CONTACT US</a></li>
+                <li><a [routerLink]="['contact']">CONTACT US</a></li>
             </ul><!--.dropdown menu -->
     </div><!--/MainNavigation-->
     <div class="MobileNavigation">
         <button type="button" data-toggle="offCanvas"> <i class="fi-list"></i></button>
     </div>
     </header>
+    <div class="off-canvas position-right" id="offCanvas" data-off-canvas data-position="right">
+        <ul class="vertical menu" data-drilldown>
+        <li><a [routerLink]="['welcome']">WELCOME</a></li>
+                <li><a [routerLink]="['About']">ABOUT US</a>
+                    <ul class="menu">
+                        <li><a href="#">Dropdown Link 1</a></li>
+                        <li><a href="#">Dropdown Link 2</a></li>
+                        <li><a href="#">Dropdown Link 3</a></li>
+                    </ul>
+                </li><!--/End of About Us-->
+                <li><a [routerLink]="['ministries']">MINISTRIES</a>
+                    <ul class="menu">
+                        <li><a href="#">Dropdown Link 1</a></li>
+                        <li><a href="#">Dropdown Link 2</a></li>
+                        <li><a href="#">Dropdown Link 3</a></li>
+                    </ul>
+                </li><!--/ministries-->
+                <li><a [routerLink]="['calendar']">CALENDAR</a></li>
+                <li><a href="#">MEDIA</a>
+                    <ul class="menu">
+                        <li><a [routerLink]="['sermon']">Sermons</a></li>
+                        <li><a [routerLink]="['blog']">Blog</a></li>
+                        <li><a [routerLink]="['radio-devotions']">Radio Devotions</a></li>
+                        <li><a [routerLink]="['gallery']">Gallery</a></li>
+                    </ul>
+                </li><!--/media-->
+                <li><a [routerLink]="['contact']">CONTACT US</a></li>
+    </ul><!--.dropdown menu --></div><!--slideout menu-->
+    <div class="off-canvas-content" data-off-canvas-content>
