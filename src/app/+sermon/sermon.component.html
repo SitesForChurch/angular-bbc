@@ -1,3 +1,26 @@
-<p>
-  sermon works!
-</p>
+<div *ngFor="let sermon of sermons.records">
+  
+  {{ sermon.fields | json }}
+  
+  <h2>{{ sermon.fields.title }}</h2>
+  {{ sermon.fields.speaker-name | json }}
+</div>
+
+
+ <div class="off-canvas-content" data-off-canvas-content>
+    <div class="sermonslistContent__header">
+        <div class="wrapper">
+            <h1>Sermons</h1>
+            <h3>The Preaching Ministry of Bible Baptist Church</h3>
+        </div>
+    </div><!--/sermonslistContent__header-->
+    <div class="sermonslistContent">
+        <div class="sermonslistContent__MainList">
+            <div *ngFor="let sermon of sermons.records" class="sermonslistItem">
+                <div class="sermonslistItem__thumbnail">
+                  <img src="{{ sermon.fields.speaker-thumbnail.url }}" alt="">
+                </div><!--/sermonslistitem__thumbnail-->          
+            </div><!--/sermonslistItem-->           
+        </div><!--/end main list-->
+    </div><!--/sermonslistContent-->
+ </div>  
