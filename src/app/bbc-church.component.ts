@@ -34,5 +34,4 @@ import { NgfooterComponent } from './ngfooter/ngfooter.component';
   {path: '/', component: HomeComponent}
 ])
 export class BbcChurchAppComponent {
-  title = 'bbc-church works!';
 }

@@ -4,7 +4,11 @@
     "name": "bbc-church"
   },
   "apps": [
-    {"main": "src/main.ts", "tsconfig": "src/tsconfig.json"}
+    {
+      "main": "src/main.ts",
+      "tsconfig": "src/tsconfig.json",
+      "mobile": false
+    }
   ],
   "addons": [],
   "packages": [],
@@ -20,6 +24,8 @@
   },
   "defaults": {
     "prefix": "bbc",
-    "sourceDir": "src"
+    "sourceDir": "src",
+    "styleExt": "css",
+    "prefixInterfaces": false
   }
 }
