@@ -1,10 +1,3 @@
-<div *ngFor="let sermon of sermons.records">
-  
-  {{ sermon.fields | json }}
-  
-  <h2>{{ sermon.fields.title }}</h2>
-  {{ sermon.fields.speaker-name | json }}
-</div>
 
 
  <div class="off-canvas-content" data-off-canvas-content>
@@ -18,9 +11,10 @@
         <div class="sermonslistContent__MainList">
             <div *ngFor="let sermon of sermons.records" class="sermonslistItem">
                 <div class="sermonslistItem__thumbnail">
-                  <img src="{{ sermon.fields.speaker-thumbnail.url }}" alt="">
-                </div><!--/sermonslistitem__thumbnail-->          
-            </div><!--/sermonslistItem-->           
+                  <h1>Image sermon.fields.title</h1>
+                  <img src="{{ sermon.fields.title }}" alt="">
+                </div><!--/sermonslistitem__thumbnail-->
+            </div><!--/sermonslistItem-->
         </div><!--/end main list-->
     </div><!--/sermonslistContent-->
- </div>  
+ </div>
