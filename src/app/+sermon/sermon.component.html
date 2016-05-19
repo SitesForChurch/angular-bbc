@@ -1,20 +1,17 @@
-
-
- <div class="off-canvas-content" data-off-canvas-content>
-    <div class="sermonslistContent__header">
-        <div class="wrapper">
-            <h1>Sermons</h1>
-            <h3>The Preaching Ministry of Bible Baptist Church</h3>
-        </div>
-    </div><!--/sermonslistContent__header-->
-    <div class="sermonslistContent">
-        <div class="sermonslistContent__MainList">
-            <div *ngFor="let sermon of sermons.records" class="sermonslistItem">
-                <div class="sermonslistItem__thumbnail">
-                  <h1>Image sermon.fields.title</h1>
-                  <img src="{{ sermon.fields.title }}" alt="">
-                </div><!--/sermonslistitem__thumbnail-->
-            </div><!--/sermonslistItem-->
-        </div><!--/end main list-->
-    </div><!--/sermonslistContent-->
- </div>
+<div class="off-canvas-content" data-off-canvas-content>
+  <div class="sermonslistContent__header">
+    <div class="wrapper">
+      <h1>Sermons</h1>
+      <h3>The Preaching Ministry of Bible Baptist Church</h3>
+    </div>
+  </div><!--/sermonslistContent__header-->
+  <div class="sermonslistContent">
+    <div class="sermonslistContent__MainList">
+      <div *ngFor="let sermon of sermons.records" class="sermonslistItem">
+        <div class="sermonslistItem__thumbnail">
+          <p>Image {{ sermon.fields | json }}</p>
+          <img  *ngFor="let img of sermon.fields.speaker_thumbnail" src="{{ img.url }}" alt="">
+        </div><!--/sermonslistitem__thumbnail-->
+      </div><!--/sermonslistItem-->
+    </div><!--/end main list-->
+  </div><!--/sermonslistContent-->
