@@ -10,7 +10,7 @@
       <div *ngFor="let sermon of sermons" class="sermonslistItem">
         <!--code><pre>Sermon data: {{ sermon | json }}</pre></code-->
         <div class="sermonslistItem__thumbnail">
-          <img  *ngFor="let img of sermon.speaker_thumbnail" src="{{ img.url }}" alt="">
+          <img  *ngFor="let img of sermon.series_featured_image" src="{{ img.url }}" alt="">
         </div><!--/sermonslistitem__thumbnail-->
         <div class="sermonslistItem__teaser">
           <div class="sermonslistItem__title">
@@ -23,7 +23,7 @@
           </div><!--/sermonslistItem__title-->
           <ul class="sermonslistItem__tagline">
             <li><i class="fi-calendar"></i> {{ sermon.date }}</li>
-            <li><i class="fi-clock"></i> Sunday Evening</li>
+            <li><i class="fi-clock"></i> {{ sermon.service }}</li>
             <li><i class="fi-torso-business"></i> {{ sermon.speaker_role }} {{ sermon.speaker_name }}</li>
             <li><i class="fi-book"></i> {{ sermon.bible_text }}</li>
           </ul>
