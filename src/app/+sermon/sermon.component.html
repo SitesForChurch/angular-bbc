@@ -8,7 +8,7 @@
   <div class="sermonslistContent">
     <div class="sermonslistContent__MainList">
       <div *ngFor="let sermon of sermons" class="sermonslistItem">
-        <code><pre>Sermon data: {{ sermon | json }}</pre></code>
+        <!--code><pre>Sermon data: {{ sermon | json }}</pre></code-->
         <div class="sermonslistItem__thumbnail">
           <img  *ngFor="let img of sermon.speaker_thumbnail" src="{{ img.url }}" alt="">
         </div><!--/sermonslistitem__thumbnail-->
