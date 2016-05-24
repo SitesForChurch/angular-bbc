@@ -1,16 +1,20 @@
 ## Start
 
-before start import airtable kay
+before start copy .env_example to .env file
 ```
-app/root$ export AIRTABLE_API_KEY=YOUR_API_KEY
+your_app_root$ cd .env_example .env
 ```
+and change values in `.env` as needed
+
 in one terminal write 
 ```
-app/root$ npm run build
+your_app_root$ npm run build
 ```
 and in another
 ```
-app/root$ npm start
+your_app_root$ npm start
 ```
-First command will build angular 2 from `src` to `public` folder and will watch for changes
+First command will build angular 2 from `src` to `public` folder
 Second start nodeJs server on Express on *localhost:3000*
+
+For now whe angular-cli not stable need all the time delete public and tmp folders by hand after run every `npm run build`
