@@ -22,7 +22,7 @@
             </ul><!--/action__buttons-->
           </div><!--/sermonslistItem__title-->
           <ul class="sermonslistItem__tagline">
-            <li><i class="fi-calendar"></i> {{ sermon.date | dateObj | date:'fullDate' }}</li>
+            <li><i class="fi-calendar"></i> {{ sermon.date | dateToObj | date:'fullDate' }}</li>
             <li><i class="fi-clock"></i> {{ sermon.service }}</li>
             <li><i class="fi-torso-business"></i> {{ sermon.speaker_role }} {{ sermon.speaker_name }}</li>
             <li><i class="fi-book"></i> {{ sermon.bible_text }}</li>
