@@ -8,7 +8,7 @@
   <div class="sermonslistContent">
     <div class="sermonslistContent__MainList">
       <div *ngFor="let sermon of sermons" class="sermonslistItem">
-        <code><pre>Sermon data: {{ sermon | json }}</pre></code>
+        <!--code><pre>Sermon data: {{ sermon | json }}</pre></code-->
         <div class="sermonslistItem__thumbnail">
           <img  *ngFor="let img of sermon.series_featured_image" src="{{ img.url }}" alt="">
         </div><!--/sermonslistitem__thumbnail-->
@@ -28,9 +28,8 @@
             <li><i class="fi-book"></i> {{ sermon.bible_text }}</li>
           </ul>
           <p *ngIf="sermon.content" class="sermonslistItem__description">{{ sermon.content | elipsis:200 }}</p>
-          <audio class="sermonslistPlayer" controls>
-            <source src="horse.ogg" type="audio/ogg">
-            <source src="horse.mp3" type="audio/mpeg">
+          <audio *ngIf="sermon.sermon_mp3"  class="sermonslistPlayer" controls>
+            <source *ngFor="let media of sermon.sermon_mp3" src="{{ media.url }}" type="{{ media.type }}">
             Your browser does not support the audio element.
           </audio>
           <a href="#" class="button"><i class="fi-download"></i> Download</a>
